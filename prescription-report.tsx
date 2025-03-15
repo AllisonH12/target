@@ -31,11 +31,11 @@ const PrescriptionReport = () => {
             <div className="space-y-1 text-sm">
               <div className="flex justify-between">
                 <span className="font-medium">Name:</span>
-                <span>John Smith</span>
+                <span>Allison Huang</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Age:</span>
-                <span>50 years</span>
+                <span>18 years</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Activity:</span>
