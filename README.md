@@ -4,11 +4,13 @@ A specialized web application designed to help optometrists provide customized v
 
 ## Overview
 
-This application provides two main tools:
+This application provides three main tools:
 
 1. **Interactive Focus Simulator** - A visual tool that demonstrates how different vision correction options affect a shooter's sight picture. It allows adjustment of focus points, correction types, and simulates various shooting conditions.
 
 2. **Prescription Report** - A professional report template for optometrists to provide specialized vision prescriptions for shooters, including detailed recommendations and adaptation protocols.
+
+3. **Educational Resources** - Comprehensive information about vision science for target shooting, including visual hierarchy, correction options, dominant eye considerations, and adaptation protocols.
 
 ## Features
 
@@ -17,6 +19,9 @@ This application provides two main tools:
 - Adjustable focus points to demonstrate sight vs. target clarity
 - Customizable parameters for add power, dominant eye, and lighting conditions
 - Professional prescription report template
+- Educational content on vision science for target shooting
+- Adaptation protocols for new vision corrections
+- Visual training techniques and dominant eye testing information
 
 ## Target Users
 
@@ -65,9 +70,10 @@ This application provides two main tools:
 
 ## Application Pages
 
-- **Home Page** - Overview of the application with links to the simulator and report
+- **Home Page** - Overview of the application with links to all tools
 - **Simulator Page** - Interactive tool to visualize different vision corrections
 - **Report Page** - Sample prescription report for target shooters
+- **Education Page** - Comprehensive information about vision science for shooting
 
 ## Deployment
 
