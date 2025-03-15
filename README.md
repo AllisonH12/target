@@ -78,6 +78,14 @@ To deploy to Vercel:
 2. Login to Vercel: `vercel login`
 3. Deploy: `vercel`
 
+### Vercel Features
+
+The application is configured with the following Vercel features:
+
+- **Web Analytics**: Enabled to track user interactions and page views
+- **Custom Domain**: The application is accessible via `target-dusky.vercel.app`
+- **GitHub Integration**: Automatic deployments from the GitHub repository
+
 ## License
 
 This project is proprietary and not licensed for public use without permission.
