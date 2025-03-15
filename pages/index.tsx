@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Target, Eye, FileText } from 'lucide-react';
+import { Target, Eye, FileText, BookOpen } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-2">
@@ -55,6 +55,28 @@ export default function Home() {
               <Link href="/report" passHref>
                 <Button className="w-full">
                   View Sample Report
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+          
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="pb-2">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-6 w-6 text-blue-700" />
+                <CardTitle>Educational Resources</CardTitle>
+              </div>
+              <CardDescription>
+                Learn about vision science for target shooting
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0 pb-6">
+              <p className="text-gray-600 mb-6">
+                Explore the science behind vision in shooting sports. Understand how different vision corrections work, the adaptation process, and techniques to optimize visual performance.
+              </p>
+              <Link href="/education" passHref>
+                <Button className="w-full">
+                  View Resources
                 </Button>
               </Link>
             </CardContent>
