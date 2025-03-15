@@ -24,6 +24,10 @@ const InteractiveFocusSimulator = () => {
 
   // Calculate blur factors based on settings
   const getBlurFactors = () => {
+    // Define correction type as a valid key
+    type CorrectionType = 'single' | 'multifocal' | 'monovision' | 'bifocal';
+    type LightCondition = 'low' | 'medium' | 'high';
+    
     // Base blur values for each correction type
     const blurProfiles = {
       single: { 
@@ -46,19 +50,20 @@ const InteractiveFocusSimulator = () => {
 
     // Modify blur based on add power
     const addModifier = parseFloat(addPower) / 2;
-    const lightModifier = { low: 1.2, medium: 1.0, high: 0.8 }[lightCondition];
+    const lightModifiers = { low: 1.2, medium: 1.0, high: 0.8 };
+    const lightModifier = lightModifiers[lightCondition as LightCondition] || 1.0;
     
     // Apply all modifiers
     return {
-      sightBlur: blurProfiles[correctionType].sightBlur * addModifier * lightModifier,
-      targetBlur: blurProfiles[correctionType].targetBlur * addModifier * lightModifier
+      sightBlur: blurProfiles[correctionType as CorrectionType].sightBlur * addModifier * lightModifier,
+      targetBlur: blurProfiles[correctionType as CorrectionType].targetBlur * addModifier * lightModifier
     };
   };
 
   const blurFactors = getBlurFactors();
 
   // Function to calculate CSS filter for blur effect
-  const getBlurFilter = (blurAmount) => {
+  const getBlurFilter = (blurAmount: number): string => {
     return `blur(${Math.min(8, blurAmount * 10)}px)`;
   };
 
